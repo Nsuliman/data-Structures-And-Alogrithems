@@ -18,8 +18,8 @@ const howMuchPencil = (str) => {
   // Solution code here...
   for ( let i =0;i<=str.length;i++)
   {
-      let firstLetter = str.slice(i);
-      result.push(firstLetter);
+      let firstLet = str.slice(i);
+      result.push(firstLet);
   }
   return result;
 };
@@ -34,6 +34,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
