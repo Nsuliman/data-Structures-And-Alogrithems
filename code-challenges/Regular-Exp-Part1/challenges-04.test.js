@@ -28,6 +28,12 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  
+  const capWord = /\b[A-Z]\w*/g;
+  const matches = str.match(capWord)
+  var array = [];
+  return matches ? matches :array;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,9 +42,17 @@ CHALLENGE 3
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+// const citiesAtoJ = (arr) => {
+//   // Solution code here...
+
+// };
+
+//   const cityPattern = /^[A-J]/;
+//   const results = [];
+//   arr.forEach(city => {
+//     if(cityPattern.test(city)) results.push(city);
+//   })
+//   return results;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
