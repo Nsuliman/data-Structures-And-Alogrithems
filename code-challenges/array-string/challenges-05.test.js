@@ -78,7 +78,6 @@ const gruffaloCrumble = {
   ]
 };
 
-
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
