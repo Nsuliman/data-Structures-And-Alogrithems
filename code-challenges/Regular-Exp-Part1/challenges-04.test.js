@@ -42,17 +42,18 @@ CHALLENGE 3
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-// const citiesAtoJ = (arr) => {
+const citiesAtoJ = (arr) => {
 //   // Solution code here...
 
-// };
+const cityAJ = /^[A-J]\w*/g;
+const cityArray = [];
+arr.forEach(element => {
+if (element.match(cityAJ)) 
+  cityArray.push(element);
+});
+return cityArray;
+};
 
-//   const cityPattern = /^[A-J]/;
-//   const results = [];
-//   arr.forEach(city => {
-//     if(cityPattern.test(city)) results.push(city);
-//   })
-//   return results;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
