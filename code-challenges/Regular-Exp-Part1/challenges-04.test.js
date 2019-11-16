@@ -14,6 +14,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  let isNumber = /[0-9]/g;
+  return isNumber.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
