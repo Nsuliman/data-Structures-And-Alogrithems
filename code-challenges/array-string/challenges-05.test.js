@@ -105,6 +105,16 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(element => {
+    
+    let firstSent = element;
+
+    let split1 = firstSent.slice(' ');
+
+    let split2 = split1.slice(' ');
+
+    result.push(split2);
+}); 
   return result;
 };
 
