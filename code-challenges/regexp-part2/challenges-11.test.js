@@ -34,6 +34,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  var validemail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  return validemail.test(email) ? true :false;
 };
 
 /* ------------------------------------------------------------------------------------------------
