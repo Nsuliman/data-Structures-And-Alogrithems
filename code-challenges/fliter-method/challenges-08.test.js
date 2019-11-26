@@ -30,6 +30,12 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  let rex = /^[aeiou]/i;
+  const strVowels = arr.filter( (value,idx) =>
+  {
+    return rex.test(value);
+  });
+  return strVowels;
 };
 
 
