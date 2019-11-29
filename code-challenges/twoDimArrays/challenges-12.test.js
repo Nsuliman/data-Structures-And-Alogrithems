@@ -24,7 +24,20 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  let totalcookies = [];
 
+  for (let i = 0; i<stores[0].length;i++)     
+  {
+    let storesHourly = 0;         // intial value to 0 every time when i need to clculate the cookies hour for all stores
+
+    for (let j = 0; j<stores.length;j++) 
+    {
+      storesHourly = storesHourly + stores[j][i];
+
+    }    
+    totalcookies.push(storesHourly);
+  }
+  return totalcookies;
 };
 
 /* ------------------------------------------------------------------------------------------------
