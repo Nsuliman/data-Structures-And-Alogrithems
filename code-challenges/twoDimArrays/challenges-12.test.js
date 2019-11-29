@@ -81,6 +81,18 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  // let qunforeach = [];
+  // for (let i = 0; i<arr[1].length;i++)  
+  // {
+  //   for (let j = 0; j<items.length;j++) 
+  //   {
+  //     return qunforeach.push();
+  //   }
+
+  // }  
+  // let qunforeach = [];
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,6 +115,15 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+  if (board[row][col]=== '#' )
+  {
+      return 'hit';
+  }
+  else
+  {
+    return 'miss';
+
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
