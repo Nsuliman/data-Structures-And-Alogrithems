@@ -10,6 +10,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+
+  return arr.map (element => element.charAt(0));
 };
 
 /* ------------------------------------------------------------------------------------------------
