@@ -172,6 +172,21 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+
+  var outarr = [];
+
+  arr.forEach (element =>
+    {
+      if (element % 3 == 0 && element % 5 == 0) 
+      outarr.push('Fizz Buzz');
+      else if (element % 5 == 0 )
+      outarr.push('Buzz');
+      else if (element % 3 == 0 )
+      outarr.push('Fizz');
+      else
+      outarr.push(element);
+    });
+  return outarr ;
 };
 
 /* ------------------------------------------------------------------------------------------------
