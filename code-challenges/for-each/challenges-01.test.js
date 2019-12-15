@@ -99,12 +99,32 @@ This function should use forEach again, but rather than taking in a callback as 
 This anonymous function should accept up to three arguments: the element, the index, and the array.
 ------------------------------------------------------------------------------------------------ */
 
+/************************** 1st way not working :( **********************************/
+// I tried with index and function have 3 arg but not working 
+// const anonymous = (element,index,arr) => {
+//   // Solution code here...
+//   if (element % 3 == 2)
+//   arr.pop(index);
+// };
+
+// const removeWithAnon = (arr) => {
+//   // Solution code here...
+//   arr.forEach(ment => anonymous(ment,idx,arr));
+//     return arr;
+// };
+
+
+/************************** 2nd way without index is working :( **********************************/
+// Write it down as 3 & 4 challenges 
 const removeWithAnon = (arr) => {
   // Solution code here...
-  arr.forEach(ment => (ment,index,arr));
-    callback(ment,arr);
-    return arr;
-};
+  arr.forEach((element) => {
+    if (element % 3 == 2) {
+      arr.pop();
+    }
+  });
+  return arr;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
