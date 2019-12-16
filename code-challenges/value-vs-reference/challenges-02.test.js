@@ -28,7 +28,10 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
-  arr.push(arr[0]);
+  // arr.push(arr[0]);        // My first way 
+
+  let var2 = arr[0];           // My Second way 
+  arr.push(var2);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,7 +51,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
-  obj.yearBorn = year;
+  obj.yearBorn = year;      // Soo easy 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,6 +72,11 @@ const setStatusAsAuthor = (people) => {
   people.forEach(element => {
       element.isAuthor = true;
   });
+
+  // people.foreach (obj => 
+  //   {
+  //     obj.isAuther = true ;
+  //   });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,7 +100,6 @@ const append = (arr1, arr2) => {
     {
         arr1.push(element);
     });
-
 };
 
 /* ------------------------------------------------------------------------------------------------
