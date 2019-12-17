@@ -163,8 +163,20 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
-const sortMeetingsByDay = (arr) => {
+const sortMeetingsByDay = (arr) => {            // I saw how they solve it on internet but I will not put it in my code 
   // Solution code here...
+
+   return arr.sort ((a,b) =>                    //  Not passed 
+  { 
+    if (a.dayOfWeek === b.dayOfWeek) 
+    // return a.end - b.end;
+    return indexOf(a) - indexOf(b);
+    else
+    return a.dayOfWeek > b.dayOfWeek;
+  });
+
+  // return arr.sort( (a,b) => indexOf(a).dayOfWeek - indexOf(b).dayOfWeek);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -177,8 +189,17 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
-const sortSchedule = (arr) => {
+const sortSchedule = (arr) => {                              // I saw how they solve it on internet but I will not put it in my code 
   // Solution code here...
+
+  return arr.sort ((a,b) =>                    //  Not passed
+  { 
+    if (a.start === b.start) 
+    return a.end - b.end;
+    else
+    return a.start > b.start ? -1 :1 ;
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
