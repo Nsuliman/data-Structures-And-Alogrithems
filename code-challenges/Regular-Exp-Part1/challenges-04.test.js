@@ -114,6 +114,10 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  // let removeVowels = /[a]||[e]||[i]||[o]||[u]/g;            // works with small letters
+  let removeVowels = /[AEIOUaeiou]/g;         // took the idea  from this website (https://stackoverflow.com/questions/5488028/how-do-i-check-for-vowels-in-javascript)
+
+  return str.replace(removeVowels,'_');
 };
 
 /* ------------------------------------------------------------------------------------------------
