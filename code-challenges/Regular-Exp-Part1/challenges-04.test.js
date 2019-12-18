@@ -15,7 +15,9 @@ For example:
 const isNum = (input) => {
   // Solution code here...
   let isNumber = /[0-9]/g;
-  let tester = isNumber.test(input);
+  // return isNumber.test(input);               // First way 
+
+  let tester = isNumber.test(input);            // Second way 
   if (tester)
   return true;
   else 
@@ -33,11 +35,10 @@ Return an array containing all the matches.
 const isCapitalized = (str) => {
   // Solution code here...
   
-  // const capWord = /\b[A-Z]\w*/g;
-  // const matches = str.match(capWord)
-  // var array = [];
-  // return matches ? matches :array;
-
+  const capWord = /\b[A-Z]\w*/g;
+  const matches = str.match(capWord)
+  var array = [];
+  return matches ? matches :array;
 };
 
 /* ------------------------------------------------------------------------------------------------
