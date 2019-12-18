@@ -75,8 +75,8 @@ Do not use the vertical bar (pipe) in your pattern.
 const matchMonth = (input) => {
   // Solution code here...
 
-  // const monthm = /^[Oo]ct(ober)?$/;                 // by internet 
-  // return monthm.test(input);
+  const monthm = /^[Oo]ct(ober)?$/;                 // by internet 
+  return monthm.test(input);
 
   // const monthm = /^[October][Oct][october][oct]+&/g;
   // return monthm.test(input) ? true :false;
