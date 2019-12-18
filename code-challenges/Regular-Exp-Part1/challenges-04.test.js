@@ -15,7 +15,11 @@ For example:
 const isNum = (input) => {
   // Solution code here...
   let isNumber = /[0-9]/g;
-  return isNumber.test(input);
+  let tester = isNumber.test(input);
+  if (tester)
+  return true;
+  else 
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,10 +33,10 @@ Return an array containing all the matches.
 const isCapitalized = (str) => {
   // Solution code here...
   
-  const capWord = /\b[A-Z]\w*/g;
-  const matches = str.match(capWord)
-  var array = [];
-  return matches ? matches :array;
+  // const capWord = /\b[A-Z]\w*/g;
+  // const matches = str.match(capWord)
+  // var array = [];
+  // return matches ? matches :array;
 
 };
 
@@ -45,13 +49,13 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 const citiesAtoJ = (arr) => {
 //   // Solution code here...
 
-const cityAJ = /^[A-J]\w*/g;
-const cityArray = [];
-arr.forEach(element => {
-if (element.match(cityAJ)) 
-  cityArray.push(element);
-});
-return cityArray;
+// const cityAJ = /^[A-J]\w*/g;
+// const cityArray = [];
+// arr.forEach(element => {
+// if (element.match(cityAJ)) 
+//   cityArray.push(element);
+// });
+// return cityArray;
 };
 
 
@@ -70,8 +74,8 @@ Do not use the vertical bar (pipe) in your pattern.
 const matchMonth = (input) => {
   // Solution code here...
 
-  const monthm = /^[Oo]ct(ober)?$/;                 // by internet 
-  return monthm.test(input);
+  // const monthm = /^[Oo]ct(ober)?$/;                 // by internet 
+  // return monthm.test(input);
 
   // const monthm = /^[October][Oct][october][oct]+&/g;
   // return monthm.test(input) ? true :false;
