@@ -134,8 +134,8 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
-  let shellls = /\b([A-Za-z]*ells)/g        // Based on Regular Expressions 101 Overview inside the assignment ( /s.?([A-Za-z]in)\s+/g)
-  
+  let shellls = /\b([A-Za-z]*ells)/g;     // Based on Regular Expressions 101 Overview inside the assignment ( /s.?([A-Za-z]in)\s+/g)
+
   return str.match(shellls);
 };
 
