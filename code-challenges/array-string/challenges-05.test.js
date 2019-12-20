@@ -169,6 +169,20 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  
+    // arr.forEach (element =>
+    //   {
+    //     if (element%2 === 0)
+    //     {
+    //       return arr.splice(indexOf(element),1);
+    //     }
+    //   });
+
+      for (i=0; i < arr.length; ++i) {
+        if (arr[i] % 2 === 0) {
+          return arr.splice(i, 1); // Remove even numbers
+        }
+      }
 };
 
 /* ------------------------------------------------------------------------------------------------
