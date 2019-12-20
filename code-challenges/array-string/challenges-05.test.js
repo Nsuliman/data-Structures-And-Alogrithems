@@ -137,6 +137,20 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+
+  recipe.steps.forEach ( element =>
+    { 
+      let step1 = element.split(' ')
+      // console.log('step1 : ', step1);
+
+      let step2 = step1.slice(0,1);
+      // console.log('step2 : ', step2);
+
+      let step2tostr = step2.toString();
+      // console.log('step2tostr : ', step2tostr);
+      result.push(step2tostr);
+
+    });
   return result;
 };
 
