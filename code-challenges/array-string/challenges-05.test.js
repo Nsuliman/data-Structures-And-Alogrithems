@@ -34,7 +34,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  return arr.split('');
+  // return arr.split('');
 };
 
 
@@ -79,19 +79,19 @@ const gruffaloCrumble = {
 };
 
 const listFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-recipe.ingredients.forEach(element => {
+//   let result = [];
+//   // Solution code here...
+// recipe.ingredients.forEach(element => {
     
-    let firstSent = element;
-    let firstindex = firstSent.indexOf(' ');
-    let slice1 = firstSent.slice(firstindex+1);
+//     let firstSent = element;
+//     let firstindex = firstSent.indexOf(' ');
+//     let slice1 = firstSent.slice(firstindex+1);
 
-    let secondindex = slice1.indexOf(' ');
-    let slice2 = slice1.slice(secondindex+1);
-    result.push(slice2);
-}); 
-  return result;
+//     let secondindex = slice1.indexOf(' ');
+//     let slice2 = slice1.slice(secondindex+1);
+//     result.push(slice2);
+// }); 
+//   return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,19 +103,19 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  recipe.ingredients.forEach(element => {
+//   let result = [];
+//   // Solution code here...
+//   recipe.ingredients.forEach(element => {
     
-    let firstSent = element;
+//     let firstSent = element;
 
-    let split1 = firstSent.slice(' ');
+//     let split1 = firstSent.slice(' ');
 
-    let split2 = split1.slice(' ');
+//     let split2 = split1.slice(' ');
 
-    result.push(split2);
-}); 
-  return result;
+//     result.push(split2);
+// }); 
+//   return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
