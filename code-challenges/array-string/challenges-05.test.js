@@ -79,19 +79,23 @@ const gruffaloCrumble = {
 };
 
 const listFoods = (recipe) => {
-//   let result = [];
-//   // Solution code here...
-// recipe.ingredients.forEach(element => {
+  let result = [];
+  // Solution code here...
+recipe.ingredients.forEach(element => {
     
-//     let firstSent = element;
-//     let firstindex = firstSent.indexOf(' ');
-//     let slice1 = firstSent.slice(firstindex+1);
+    let firstSent = element;
+    let firstindex = firstSent.indexOf(' ');
+    // console.log('firstindex : ', firstindex);
+    let slice1 = firstSent.slice(firstindex+1);
+    // console.log('slice1 : ', slice1);
+    let secondindex = slice1.indexOf(' ');
+    // console.log('secondindex : ', secondindex);
+    let slice2 = slice1.slice(secondindex+1);
+    // console.log('slice2 : ', slice2);
 
-//     let secondindex = slice1.indexOf(' ');
-//     let slice2 = slice1.slice(secondindex+1);
-//     result.push(slice2);
-// }); 
-//   return result;
+    result.push(slice2);
+}); 
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
