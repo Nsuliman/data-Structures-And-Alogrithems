@@ -94,6 +94,7 @@ recipe.ingredients.forEach(element => {
     // console.log('slice2 : ', slice2);
 
     result.push(slice2);
+    // console.log('result : ', result);
 }); 
   return result;
 };
@@ -107,19 +108,20 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-//   let result = [];
-//   // Solution code here...
-//   recipe.ingredients.forEach(element => {
-    
-//     let firstSent = element;
+  let result = [];
+  // Solution code here...                                            // one hour to solve it byself and I am proud , hhh
+  recipe.ingredients.forEach(element => {
+ 
+    let firstSplit = element.split(' ');
+    // console.log('firstSplit : ', firstSplit);
+    let secSplit = firstSplit.slice(2,firstSplit.length)
+    // console.log(' secSplit : ', secSplit );
 
-//     let split1 = firstSent.slice(' ');
-
-//     let split2 = split1.slice(' ');
-
-//     result.push(split2);
-// }); 
-//   return result;
+    let itemName = secSplit.join(' ');
+    // console.log('itemName : ', itemName);
+    result.push(itemName);
+}); 
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
