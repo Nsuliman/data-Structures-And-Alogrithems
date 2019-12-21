@@ -20,7 +20,7 @@ const getCourseKeys = (obj) => {
 
   for (let prop in courseInfo)                    // 2nd way 
   {
-    console.log('prop : ', prop);
+    // console.log('prop : ', prop);
     arr.push(prop);
   }
     return arr;
@@ -82,10 +82,19 @@ let characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-    arr.forEach(houseName => {
-        houses.push(houseName.house);
-    });      
 
+    // arr.forEach(houseName => {                                     // 1st way 
+    //     houses.push(houseName.house);
+    // });      
+
+    arr.forEach (value =>                                             // 2nd way 
+      {
+       let houseN =  Object.values(value.house);
+        // console.log(' Object.values(value): ',houseN );
+        let houseStr = houseN.join('');
+        // console.log('houseStr : ', houseStr);
+        houses.push(houseStr)
+      });
   return houses;
 };
 
