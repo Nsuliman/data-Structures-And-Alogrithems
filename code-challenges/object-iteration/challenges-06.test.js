@@ -117,7 +117,7 @@ const hasChildrenValues = (arr, character) => {
   let ifchild = false;
   arr.forEach(child => {
     const values = Object.values(child);
-    console.log('values : ', values);
+    // console.log('values : ', values);
     if (values[0] === character && values[2].length > 0)
       ifchild = true;
   });
@@ -160,6 +160,29 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+
+  let haveChild = false;
+
+  arr.forEach (element =>
+    {
+      console.log('element : ', element);
+      let tt = Object.entries (element)
+      console.log('tt : ', tt);
+
+     let childProp = tt[2];
+      console.log(' childProp : ', childProp);
+
+    childProp.forEach (c => 
+      {
+        console.log('c : ', c);
+        if (c === character)
+        return haveChild = true;
+        else
+        return haveChild = false ;
+      });
+      
+    });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
