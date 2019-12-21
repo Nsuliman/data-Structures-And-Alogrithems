@@ -115,7 +115,7 @@ const hasChildrenValues = (arr, character) => {
   // Solution code here...
 
   let ifchild = false;                                               // 1st way 
-  arr.forEach(child => {                     
+  arr.forEach(child => {
     const values = Object.values(child);
     // console.log('values : ', values);
     if (values[0] === character && values[2].length > 0)
@@ -132,7 +132,7 @@ const hasChildrenValues = (arr, character) => {
   //   }
   // })
   // return ifchild;
-     
+
   //   });
 
 
@@ -153,15 +153,14 @@ const hasChildrenEntries = (arr, character) => {
   let haveChild = 0;
 
   Object.entries(arr).forEach(item => {
-    console.log('item : ', item);
+    // console.log('item : ', item);
     item.forEach(child => {
-      if(child.name === character) {
+      // console.log('child : ', child);
+      if (child.name === character) {
         haveChild = child.children.length > 0 ? true : false;
       }
     })
   })
-
-
   return haveChild;
 
   // let haveChild = false;
@@ -185,6 +184,20 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
+
+  let totalChar = 0;
+
+  Object.values(arr).forEach (element =>
+    {
+      console.log('element : ', element);
+      Object.values(element).forEach (charr =>
+        {
+          console.log('charr : ', charr);
+          if ( charr != null)
+          totalChar++;
+        });
+    });
+    return totalChar;
 };
 
 /* ------------------------------------------------------------------------------------------------
