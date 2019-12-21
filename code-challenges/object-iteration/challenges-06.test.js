@@ -77,7 +77,7 @@ let characters = [
     spouse: null,
     children: [],
     house: 'Snow'
-  }
+  } 
 ];
 
 const getHouses = (arr) => {
@@ -189,10 +189,10 @@ const totalCharacters = (arr) => {
 
   Object.values(arr).forEach (element =>
     {
-      console.log('element : ', element);
+      // console.log('element : ', element);
       Object.values(element).forEach (charr =>
         {
-          console.log('charr : ', charr);
+          // console.log('charr : ', charr);
           if ( charr != null)
           totalChar++;
         });
@@ -213,6 +213,31 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 const houseSize = (arr) => {
   const sizes = [];
   // Solution code here...
+  let houseObj = {};
+  let countt = 0;
+
+  Object.values(arr).forEach(everyH =>
+    {
+      var countt = 1;
+      console.log('everyH : ', everyH);
+      if (everyH.spouse)    
+      countt++;
+      everyH.children.forEach(() =>
+        {
+          countt++;
+            console.log('count : ', countt);
+            houseObj = {house : everyH.house,members :countt};
+            console.log('houseObj : ', houseObj);
+            
+        });
+        if (everyH.house == 'Greyjoy' || everyH.house == 'Snow')
+        {
+          houseObj = {house : everyH.house,members :countt};
+        }
+            sizes.push(houseObj);
+            console.log('sizes : ', sizes);
+    });
+
   return sizes;
 };
 
