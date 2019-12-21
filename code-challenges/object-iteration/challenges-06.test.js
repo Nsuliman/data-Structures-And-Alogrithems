@@ -214,7 +214,6 @@ const houseSize = (arr) => {
   const sizes = [];
   // Solution code here...
   let houseObj = {};
-  let countt = 0;
 
   Object.values(arr).forEach(everyH =>
     {
@@ -262,6 +261,31 @@ const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 const houseSurvivors = (arr) => {
   const survivors = [];
   // Solution code here...
+  let houseObj = {};
+
+  Object.values(arr).forEach(everyH =>
+    {
+      var countt = 0;
+      console.log('everyH : ', everyH);
+      if (everyH.spouse)    
+      countt++;
+      everyH.children.forEach(() =>
+        {
+          countt++;
+            console.log('count : ', countt);
+            houseObj = {house : everyH.house,members :countt};
+            console.log('houseObj : ', houseObj);
+            
+        });
+        if (everyH.house == 'Greyjoy' || everyH.house == 'Snow')
+        {
+          countt++;
+          houseObj = {house : everyH.house,members :countt};
+        }
+            survivors.push(houseObj);
+            console.log('survivors : ', survivors);
+    });
+
   return survivors;
 };
 
