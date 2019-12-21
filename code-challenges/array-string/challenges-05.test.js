@@ -16,10 +16,9 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  for ( let i =0;i<=str.length;i++)
-  {
-      let firstLet = str.slice(i);
-      result.push(firstLet);
+  for (let i = 0; i <= str.length; i++) {
+    let firstLet = str.slice(i);
+    result.push(firstLet);
   }
   return result;
 };
@@ -81,21 +80,21 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-recipe.ingredients.forEach(element => {
-    
+  recipe.ingredients.forEach(element => {
+
     let firstSent = element;
     let firstindex = firstSent.indexOf(' ');
     // console.log('firstindex : ', firstindex);
-    let slice1 = firstSent.slice(firstindex+1);
+    let slice1 = firstSent.slice(firstindex + 1);
     // console.log('slice1 : ', slice1);
     let secondindex = slice1.indexOf(' ');
     // console.log('secondindex : ', secondindex);
-    let slice2 = slice1.slice(secondindex+1);
+    let slice2 = slice1.slice(secondindex + 1);
     // console.log('slice2 : ', slice2);
 
     result.push(slice2);
     // console.log('result : ', result);
-}); 
+  });
   return result;
 };
 
@@ -111,16 +110,16 @@ const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...                                            // one hour to solve it byself and I am proud , hhh
   recipe.ingredients.forEach(element => {
- 
+
     let firstSplit = element.split(' ');
     // console.log('firstSplit : ', firstSplit);
-    let secSplit = firstSplit.slice(2,firstSplit.length)
+    let secSplit = firstSplit.slice(2, firstSplit.length)
     // console.log(' secSplit : ', secSplit );
 
     let itemName = secSplit.join(' ');
     // console.log('itemName : ', itemName);
     result.push(itemName);
-}); 
+  });
   return result;
 };
 
@@ -138,19 +137,18 @@ const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
 
-  recipe.steps.forEach ( element =>
-    { 
-      let step1 = element.split(' ')
-      // console.log('step1 : ', step1);
+  recipe.steps.forEach(element => {
+    let step1 = element.split(' ')
+    // console.log('step1 : ', step1);
 
-      let step2 = step1.slice(0,1);
-      // console.log('step2 : ', step2);
+    let step2 = step1.slice(0, 1);
+    // console.log('step2 : ', step2);
 
-      let step2tostr = step2.toString();
-      // console.log('step2tostr : ', step2tostr);
-      result.push(step2tostr);
+    let step2tostr = step2.toString();
+    // console.log('step2tostr : ', step2tostr);
+    result.push(step2tostr);
 
-    });
+  });
   return result;
 };
 
@@ -169,14 +167,14 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  
-    return arr.filter(e => e%2 != 0);
 
-      for (i=0; i < arr.length; ++i) {
-        if (arr[i] % 2 === 0) {
-          return arr.splice(i, 1); // Remove even numbers
-        }
-      }
+  return arr.filter(e => e % 2 != 0);
+
+  for (i = 0; i < arr.length; ++i) {
+    if (arr[i] % 2 === 0) {
+      return arr.splice(i, 1); // Remove even numbers
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -196,24 +194,21 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
-    // var strr = '';
-    if (numberOfCharacters < 0  )
-    return str ;
-    else if (numberOfCharacters > str.length)
-    {
-      // console.log('str.length : ', str.length);
-      // console.log('strr : ', strr);
-      return '';
+  // var strr = '';
+  if (numberOfCharacters < 0)
+    return str;
+  else if (numberOfCharacters > str.length) {
+    // console.log('str.length : ', str.length);
+    // console.log('strr : ', strr);
+    return '';
+  }
+  else {
+    for (let i = 0; i < str.length; i++) {
+      let strr = str[i].splice(str.length - numberOfCharacters);
+      console.log('strr : ', strr);
     }
-    else 
-    {
-      for ( let i = 0;i<str.length;i++)
-      {
-        let strr = str[i].splice(str.length-numberOfCharacters);
-        console.log('strr : ', strr);
-      }
-      return strr;
-    }
+    return strr;
+  }
 };
 
 
@@ -228,13 +223,12 @@ const totalSumCSV = (str) => {
   // Solution code here...
 
   let strwithoutC = str.split(',');
-  console.log('strwithoutC : ', strwithoutC);
-  strwithoutC.forEach(element => 
-    {
-      total = total + parseInt(element);
-      // console.log('element  : ', element );
-      // console.log('total  : ', total );
-    })
+  // console.log('strwithoutC : ', strwithoutC);
+  strwithoutC.forEach(element => {
+    total = total + parseInt(element);
+    // console.log('element  : ', element );
+    // console.log('total  : ', total );
+  });
   return total;
 };
 
@@ -249,6 +243,21 @@ For example, removeVowels('gregor') returns 'grgr'.
 
 const removeVowels = (str) => {
   // Solution code here...
+
+  let withV = str.split('');
+  console.log('withV : ', withV);
+  withV.forEach(element => {
+    switch (element) {
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+      let withV2 = withV.splice(2,element);
+      console.log('withV2 : ', withV2);
+    }
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
