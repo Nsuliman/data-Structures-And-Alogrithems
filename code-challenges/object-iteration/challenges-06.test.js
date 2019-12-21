@@ -114,8 +114,8 @@ hasChildrenValues(characters, 'Sansa') will return false
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
 
-  let ifchild = false;
-  arr.forEach(child => {
+  let ifchild = false;                                               // 1st way 
+  arr.forEach(child => {                     
     const values = Object.values(child);
     // console.log('values : ', values);
     if (values[0] === character && values[2].length > 0)
@@ -123,27 +123,15 @@ const hasChildrenValues = (arr, character) => {
   });
   return ifchild;
 
-  // let haveChild = false;
-  // console.log('character : ', character);
-  // arr.forEach (element => 
-  //   {
-  //     let childP = Object.values(element.children);
-  //     if (childP == [])
-  //     return haveChild = false ; 
-  //     else {
-  //       console.log('childP : ', childP);
-  //       childP.forEach(eachC => 
-  //         {
-  //           console.log('eachC : ', eachC);
-  //           if (eachC === character)
-  //           {
-  //             return haveChild = true;
-  //           }
-  //           else {
-  //             return haveChild = false;
-  //           }
-  //         });
-  //     }
+  // let ifchild = false;                                                      // 2nd way 
+
+  // Object.values(arr).forEach(child => {
+  //   // console.log('child : ', child);
+  //   if(child.name === character) {
+  //     ifchild = child.children.length > 0 ? true : false;
+  //   }
+  // })
+  // return ifchild;
      
   //   });
 
@@ -161,28 +149,32 @@ The input and output of this function are the same as the input and output from 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
 
-  let haveChild = false;
 
-  arr.forEach (element =>
-    {
-      console.log('element : ', element);
-      let tt = Object.entries (element)
-      console.log('tt : ', tt);
+  let haveChild = 0;
 
-     let childProp = tt[2];
-      console.log(' childProp : ', childProp);
+  Object.entries(arr).forEach(item => {
+    console.log('item : ', item);
+    item.forEach(child => {
+      if(child.name === character) {
+        haveChild = child.children.length > 0 ? true : false;
+      }
+    })
+  })
 
-    childProp.forEach (c => 
-      {
-        console.log('c : ', c);
-        if (c === character)
-        return haveChild = true;
-        else
-        return haveChild = false ;
-      });
-      
-    });
 
+  return haveChild;
+
+  // let haveChild = false;
+
+  // arr.forEach (element =>
+  //   {
+  //     // console.log('element : ', element);
+  //     const values = Object.values(element);
+  //   console.log('values : ', values);
+  //   if (values[0] === character && values[2].length > 0)
+  //     ifchild = true;
+  //   });
+  //   return haveChild;
 };
 
 /* ------------------------------------------------------------------------------------------------
