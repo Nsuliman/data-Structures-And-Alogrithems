@@ -7,7 +7,8 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -23,8 +24,8 @@ const getCourseKeys = (obj) => {
     // console.log('prop : ', prop);
     arr.push(prop);
   }
-    return arr;
-  
+  return arr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,18 +84,18 @@ const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
 
-    // arr.forEach(houseName => {                                     // 1st way 
-    //     houses.push(houseName.house);
-    // });      
+  // arr.forEach(houseName => {                                     // 1st way 
+  //     houses.push(houseName.house);
+  // });      
 
-    arr.forEach (value =>                                             // 2nd way 
-      {
-       let houseN =  Object.values(value.house);
-        // console.log(' Object.values(value): ',houseN );
-        let houseStr = houseN.join('');
-        // console.log('houseStr : ', houseStr);
-        houses.push(houseStr)
-      });
+  arr.forEach(value =>                                             // 2nd way 
+  {
+    let houseN = Object.values(value.house);
+    // console.log(' Object.values(value): ',houseN );
+    let houseStr = houseN.join('');
+    // console.log('houseStr : ', houseStr);
+    houses.push(houseStr)
+  });
   return houses;
 };
 
@@ -114,13 +115,39 @@ const hasChildrenValues = (arr, character) => {
   // Solution code here...
 
   let ifchild = false;
-        arr.forEach(child =>
-            {
-                const values = Object.values(child);
-               if (values[0]=== character && values[2].length > 0 )
-               ifchild= true ;
-            });
-            return ifchild;
+  arr.forEach(child => {
+    const values = Object.values(child);
+    console.log('values : ', values);
+    if (values[0] === character && values[2].length > 0)
+      ifchild = true;
+  });
+  return ifchild;
+
+  // let haveChild = false;
+  // console.log('character : ', character);
+  // arr.forEach (element => 
+  //   {
+  //     let childP = Object.values(element.children);
+  //     if (childP == [])
+  //     return haveChild = false ; 
+  //     else {
+  //       console.log('childP : ', childP);
+  //       childP.forEach(eachC => 
+  //         {
+  //           console.log('eachC : ', eachC);
+  //           if (eachC === character)
+  //           {
+  //             return haveChild = true;
+  //           }
+  //           else {
+  //             return haveChild = false;
+  //           }
+  //         });
+  //     }
+     
+  //   });
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
