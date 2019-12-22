@@ -143,6 +143,7 @@ const snorlaxAbilities = {
       },
     },
     {
+      
       slot: 1,
       is_hidden: false,
       ability: {
