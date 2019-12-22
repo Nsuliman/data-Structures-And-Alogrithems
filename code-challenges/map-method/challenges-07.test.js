@@ -142,8 +142,7 @@ const snorlaxAbilities = {
         name: 'cute charm',
       },
     },
-    {
-      
+    {      
       slot: 1,
       is_hidden: false,
       ability: {
@@ -213,6 +212,12 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
   // Solution code here...
+    let stateArr = arr.map(element => 
+      {
+        let obj = {name : element.stat.name , total : element.effort + element.baseStat}
+        return obj;
+      });
+      return stateArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
