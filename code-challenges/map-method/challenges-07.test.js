@@ -109,7 +109,7 @@ const evenOdd = (arr) => {
     
     });
     console.log('oddEvenArr', oddEvenArr)
-    
+
    return oddEvenArr;
 };
 
@@ -157,6 +157,14 @@ const snorlaxAbilities = {
 
 const extractAbilities = (arr) => {
   // Solution code here...
+
+  let abilitiesNameArr = arr.map ( element =>
+    {
+      console.log('element  : ', element );
+        return element.ability.name;
+    });
+    console.log('abilitiesNameArr : ', abilitiesNameArr);
+    return abilitiesNameArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
