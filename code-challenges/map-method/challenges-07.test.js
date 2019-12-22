@@ -69,11 +69,12 @@ For example: charCode(['h','i']) returns [104, 105].
 const charCode = (arr) => {
   // Solution code here...
 
-  // let power2array = arr.map(element => 
-  //   {
-  //      return element.charCodeAt();
-  //   });
-  //   return power2array;
+  let power2array = arr.map(element => 
+    {
+      // console.log('element.charCodeAt() : ', element.charCodeAt() );
+       return element.charCodeAt();
+    });
+    return power2array;
 };
 
 /* ------------------------------------------------------------------------------------------------
