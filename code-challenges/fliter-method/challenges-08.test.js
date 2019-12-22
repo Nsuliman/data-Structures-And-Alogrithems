@@ -39,7 +39,6 @@ const filterStringsWithVowels = (arr) => {
   return strVowels;
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
