@@ -12,7 +12,7 @@ const oddValues = (arr) => {
   // Solution code here...
   let odds = arr.filter( (value,idx) =>
   {
-    return (value % 2);
+    return (value % 2 !== 0);
   });
   return odds;
 };
