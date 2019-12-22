@@ -127,12 +127,12 @@ const getStatName = (arr, minBaseStat) => {
   //   return baseStatGArr;
 
   let filtArr = arr.filter(element => element.baseStat > minBaseStat);
-  console.log('filtArr : ', filtArr);
+  // console.log('filtArr : ', filtArr);
 
   let nameArr = filtArr.map(element => element.stat.name);
-  console.log('nameArr : ', nameArr);
+  // console.log('nameArr : ', nameArr);
   return nameArr;
-  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -186,6 +186,17 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+
+  let childChar = arr.filter(element =>
+    {
+      // console.log('element : ', element);
+      if (! element.children)
+      {
+        return element;
+      }
+    });
+    // console.log('childChar : ', childChar);
+    return childChar;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -198,6 +209,8 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 
 const evenOddNumericValues = (arr) => {
   // Solution code here...
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
