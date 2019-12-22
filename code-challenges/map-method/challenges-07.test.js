@@ -30,13 +30,13 @@ Write a function named forEachTwoToThe that produces the same output as your for
 const forEachTwoToThe = (arr) => {
   // Solution code here...
 
-  // let power2array = [];
-  // arr.forEach( element => 
-  //   {
-  //     let PowerNum = Math.pow(2,element) ;
-  //     power2array.push(PowerNum);
-  //   });
-  //   return power2array;
+  let power2array = [];
+  arr.forEach( element => 
+    {
+      let PowerNum = Math.pow(2,element) ;
+      power2array.push(PowerNum);
+    });
+    return power2array;
 
 };
 
