@@ -210,7 +210,25 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 const evenOddNumericValues = (arr) => {
   // Solution code here...
 
+  let numArr =[];
 
+  console.log('arr : ', arr);
+   arr.filter( element =>
+    {
+      console.log('element : ', element);
+      if (typeof(element) === 'number')
+      numArr.push(element);
+    });
+    console.log('numArr : ', numArr);
+
+   return numArr.map(element =>
+      {
+        if (element%2 === 0)
+        return 'even';
+        else
+        return 'odd';
+      });
+      
 };
 
 /* ------------------------------------------------------------------------------------------------
