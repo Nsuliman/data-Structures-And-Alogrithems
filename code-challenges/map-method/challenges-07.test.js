@@ -15,7 +15,8 @@ const forLoopTwoToThe = (arr) => {
 
   let power2array = [];
   for (let i=0;i<arr.length;i++) {
-    power2array.push(Math.pow(2,arr[i]));  /// to power of a number 
+    let PowerNum = Math.pow(2,arr[i]);
+    power2array.push(PowerNum);  /// to power of a number 
   }
   return power2array;
 };
@@ -29,12 +30,13 @@ Write a function named forEachTwoToThe that produces the same output as your for
 const forEachTwoToThe = (arr) => {
   // Solution code here...
 
-  let power2array = [];
-  arr.forEach( element => 
-    {
-      power2array.push(Math.pow(2,element));
-    });
-    return power2array;
+  // let power2array = [];
+  // arr.forEach( element => 
+  //   {
+  //     let PowerNum = Math.pow(2,element) ;
+  //     power2array.push(PowerNum);
+  //   });
+  //   return power2array;
 
 };
 
@@ -47,11 +49,11 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 const mapTwoToThe = (arr) => {
   // Solution code here...
 
-   let power2array = arr.map(element => 
-  {
-     return Math.pow(2,element);
-  });
-  return power2array;
+  //  let power2array = arr.map(element => 
+  // {
+  //    return Math.pow(2,element);
+  // });
+  // return power2array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,11 +69,11 @@ For example: charCode(['h','i']) returns [104, 105].
 const charCode = (arr) => {
   // Solution code here...
 
-  let power2array = arr.map(element => 
-    {
-       return element.charCodeAt();
-    });
-    return power2array;
+  // let power2array = arr.map(element => 
+  //   {
+  //      return element.charCodeAt();
+  //   });
+  //   return power2array;
 };
 
 /* ------------------------------------------------------------------------------------------------
