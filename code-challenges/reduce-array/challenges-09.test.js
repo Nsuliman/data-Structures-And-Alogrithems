@@ -167,13 +167,15 @@ const characters = [
 const countNumberOfChildren = (arr) => {
   // Solution code here...
   const numOfChild = arr.reduce((acc, num, idx) => {
-    if (num.children.length) {
+    if (num.children) {
+      // console.log('acc : ', acc);
       return acc + num.children.length;
     }
     else {
       return acc;
     }
   }, 0);
+  // console.log('numOfChild : ', numOfChild);
   return numOfChild;
 };
 
