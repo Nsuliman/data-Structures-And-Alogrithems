@@ -184,6 +184,27 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
   // Solution code here...
+
+  // let culAvg = new Array[4].fill(0);
+
+  // console.log('weather : ', weather);
+
+  let avgTemp = 0;
+  let numOfDays =0;
+
+  for (let i=0;i<weather.length;i++)
+  {
+    for (let j=0;j<weather[i].length;j++)
+    {
+      numOfDays++;
+      avgTemp += weather[i][j];
+      // console.log('weather[i][0] : ', weather[i][j]);
+      // console.log('avgTemp : ', avgTemp);
+    }
+  }
+  let Total = avgTemp/numOfDays;
+  // console.log('Total : ', Total);
+  return Total;
 };
 
 /* ------------------------------------------------------------------------------------------------
