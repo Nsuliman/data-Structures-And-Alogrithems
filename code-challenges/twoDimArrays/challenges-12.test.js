@@ -30,13 +30,16 @@ const grandTotal = (stores) => {
   {
     let storesHourly = 0;         // intial value to 0 every time when i need to clculate the cookies hour for all stores
 
+    // console.log('stores[0] : ', stores[0]);
     for (let j = 0; j<stores.length;j++) 
     {
       storesHourly = storesHourly + stores[j][i];
-
+      // console.log('stores[j][i] : ', stores[j][i]);
+      // console.log('storesHourly : ', storesHourly);
     }    
     totalcookies.push(storesHourly);
   }
+  // console.log('totalcookies : ', totalcookies);
   return totalcookies;
 };
 
@@ -52,13 +55,13 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
-  let salesarray = [];
+  // let salesarray = [];
 
-  data.forEach( (val, idx ) => {
+  // data.forEach( (val, idx ) => {
     
-    salesarray.push({ sales: `${val} cookies`, time:hours[idx] })
-  });
-  return salesarray;
+  //   salesarray.push({ sales: `${val} cookies`, time:hours[idx] })
+  // });
+  // return salesarray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,15 +118,15 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
-  if (board[row][col]=== '#' )
-  {
-      return 'hit';
-  }
-  else
-  {
-    return 'miss';
+  // if (board[row][col]=== '#' )
+  // {
+  //     return 'hit';
+  // }
+  // else
+  // {
+  //   return 'miss';
 
-  }
+  // }
 };
 
 /* ------------------------------------------------------------------------------------------------
