@@ -102,12 +102,17 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-  // let splitstr = str.split('');
-  // let reversed = splitstr.reduce( (newstring,curLetter) =>
-  // {
-  //   return curLetter + newstring;
-  // },'');
-  // return reversed;
+
+  // 103 edoC
+  let splitstr = str.split('');
+  let reversed = splitstr.reduce( (newstring,curLetter) =>
+  {
+    // console.log('newstring : ', newstring);
+    // console.log('curLetter : ', curLetter);
+    return curLetter + newstring;
+  },'');
+  // console.log('reversed : ', reversed);
+  return reversed;
 };
 
 /* ------------------------------------------------------------------------------------------------
