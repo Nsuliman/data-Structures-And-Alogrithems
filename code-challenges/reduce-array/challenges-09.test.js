@@ -189,6 +189,20 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  let count = 0;
+
+  let avgNum = arr.reduce ( (acc,val) =>
+  {
+    count++;
+    // console.log('count : ', count);
+    acc = acc + val;
+    // console.log('acc : ', acc);
+    return acc;
+  } , 0);
+  // console.log('avgNum : ', avgNum);
+  let averge = avgNum/count;
+  // console.log('averge : ', averge);
+  return averge;
 };
 
 /* ------------------------------------------------------------------------------------------------
