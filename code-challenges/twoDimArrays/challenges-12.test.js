@@ -90,18 +90,22 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
-  // let qunforeach = [];
-  // for (let i = 0; i<arr[1].length;i++)  
-  // {
-  //   for (let j = 0; j<items.length;j++) 
-  //   {
-  //     return qunforeach.push();
-  //   }
 
-  // }  
-  // let qunforeach = [];
-
-
+  // console.log('arr : ', arr);
+  var treatesQun;
+  arr.forEach(element => 
+    {
+      // console.log('element : ', element);
+       treatesQun = element.items.filter(val =>
+        {
+          // console.log('val : ', val);
+          if (val.name === 'Treats')
+          return val.quantity;
+        });
+        // console.log('treatesQun : ', treatesQun);
+    });
+    // console.log('treatesQun[0].quantity : ', treatesQun[0].quantity);
+    return treatesQun[0].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
