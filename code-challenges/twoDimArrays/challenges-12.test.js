@@ -234,8 +234,8 @@ const lowestWeeklyAverage = (weather) => {
     }
 
     let total = avgTemp / numOfDays;
-    if (total <lowest)
-    lowest= total;
+    if (total < lowest)
+      lowest = total;
   }
   return lowest;
 
@@ -255,8 +255,30 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
-};
+  // console.log('str : ', str);
 
+  const arr1 = [];
+
+  const splitByRow = str.split('\n');
+  // console.log('splitByRow : ', splitByRow);
+
+  splitByRow.forEach(row => {
+    let rowSum = 0;
+
+    // console.log('row : ', row);
+    const splitByCol = row.split(',');
+    // console.log('splitByCol : ', splitByCol);
+
+    splitByCol.forEach(col => {
+      // console.log('col : ', col);
+      rowSum += parseInt(col);
+      // console.log('rowSum : ', rowSum);
+    });
+    arr1.push(rowSum);
+  });
+
+  return arr1;
+}
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
