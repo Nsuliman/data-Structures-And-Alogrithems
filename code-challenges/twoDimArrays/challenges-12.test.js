@@ -93,19 +93,17 @@ const howManyTreats = (arr) => {
 
   // console.log('arr : ', arr);
   var treatesQun;
-  arr.forEach(element => 
-    {
-      // console.log('element : ', element);
-       treatesQun = element.items.filter(val =>
-        {
-          // console.log('val : ', val);
-          if (val.name === 'Treats')
-          return val.quantity;
-        });
-        // console.log('treatesQun : ', treatesQun);
+  arr.forEach(element => {
+    // console.log('element : ', element);
+    treatesQun = element.items.filter(val => {
+      // console.log('val : ', val);
+      if (val.name === 'Treats')
+        return val.quantity;
     });
-    // console.log('treatesQun[0].quantity : ', treatesQun[0].quantity);
-    return treatesQun[0].quantity;
+    // console.log('treatesQun : ', treatesQun);
+  });
+  // console.log('treatesQun[0].quantity : ', treatesQun[0].quantity);
+  return treatesQun[0].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,12 +126,10 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
-  if (board[row][col]=== '#' )
-  {
-      return 'hit';
+  if (board[row][col] === '#') {
+    return 'hit';
   }
-  else
-  {
+  else {
     return 'miss';
   }
 };
@@ -153,11 +149,9 @@ const calculateProduct = (numbers) => {
   // Solution code here...
 
   let multiplySum = 1;
-  for (let i=0;i<numbers.length;i++)
-  {
+  for (let i = 0; i < numbers.length; i++) {
     // console.log('i : ', i);
-    for (let j=0;j<numbers[i].length;j++)
-    {
+    for (let j = 0; j < numbers[i].length; j++) {
       // console.log('j : ', j);
       multiplySum *= numbers[i][j];
     }
@@ -186,25 +180,22 @@ const averageDailyTemperature = (weather) => {
   // Solution code here...
 
   // let culAvg = new Array[4].fill(0);
-
   // console.log('weather : ', weather);
 
   let avgTemp = 0;
-  let numOfDays =0;
+  let numOfDays = 0;
 
-  for (let i=0;i<weather.length;i++)
-  {
-    for (let j=0;j<weather[i].length;j++)
-    {
+  for (let i = 0; i < weather.length; i++) {
+    for (let j = 0; j < weather[i].length; j++) {
       numOfDays++;
       avgTemp += weather[i][j];
       // console.log('weather[i][0] : ', weather[i][j]);
       // console.log('avgTemp : ', avgTemp);
     }
   }
-  let Total = avgTemp/numOfDays;
-  // console.log('Total : ', Total);
-  return Total;
+  let total = avgTemp / numOfDays;
+  // console.log('total : ', total);
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -226,6 +217,28 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
+
+  // console.log('weather : ', weather);
+
+  let lowest = 100;         // any value for testing
+
+  for (let i = 0; i < weather.length; i++) {
+    let avgTemp = 0;
+    let numOfDays = 0;
+
+    for (let j = 0; j < weather[i].length; j++) {
+      numOfDays++;
+      avgTemp += weather[i][j];
+      // console.log('weather[i][0] : ', weather[i][j]);
+      // console.log('avgTemp : ', avgTemp);
+    }
+
+    let total = avgTemp / numOfDays;
+    if (total <lowest)
+    lowest= total;
+  }
+  return lowest;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
