@@ -224,6 +224,23 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
+  
+  let primeNum = arr.reduce( (acc,val) =>
+  {
+    // console.log('val : ', val);
+    let isPrimeNum =  isPrime(val);
+    // console.log('isPrimeNum : ', isPrimeNum);
+    if (isPrimeNum === true)
+    {
+      return acc = acc +1;
+    }
+    else
+    {
+      return acc;
+    }
+  },0);
+  // console.log('primeNum : ', primeNum);
+  return primeNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
