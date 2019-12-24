@@ -315,6 +315,34 @@ Write a function named extractChildren that, given the array of characters from 
 
 const extractChildren = (arr) => {
   // Solution code here...
+
+  // 1st Task 
+  let rex = /[a]/;
+  
+  let childFilter = arr.filter( element =>
+    {
+      console.log('element : ', element);
+      return rex.test(element.name);
+    });
+    console.log('childFilter : ', childFilter);
+    // return childFilter;
+
+  // 2nd Task 
+  
+  let childNameArr = childFilter.reduce ( (acc,val) =>
+  {
+    console.log('val : ', val);
+    if (val.children)
+    {
+      val.children.forEach(child => {
+        console.log('child : ', child);
+        acc.push(child);
+      });
+      console.log('acc : ', acc);
+    }
+    return acc;
+  },[]);
+  return childNameArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
