@@ -26,17 +26,15 @@ const grandTotal = (stores) => {
   // Solution code here...
   let totalcookies = [];
 
-  for (let i = 0; i<stores[0].length;i++)     
-  {
+  for (let i = 0; i < stores[0].length; i++) {
     let storesHourly = 0;         // intial value to 0 every time when i need to clculate the cookies hour for all stores
 
     // console.log('stores[0] : ', stores[0]);
-    for (let j = 0; j<stores.length;j++) 
-    {
+    for (let j = 0; j < stores.length; j++) {
       storesHourly = storesHourly + stores[j][i];
       // console.log('stores[j][i] : ', stores[j][i]);
       // console.log('storesHourly : ', storesHourly);
-    }    
+    }
     totalcookies.push(storesHourly);
   }
   // console.log('totalcookies : ', totalcookies);
@@ -55,13 +53,18 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
-  // let salesarray = [];
+  let salesarray = [];
+  // console.log('hours : ', hours);
+  // console.log('data : ', data);
 
-  // data.forEach( (val, idx ) => {
-    
-  //   salesarray.push({ sales: `${val} cookies`, time:hours[idx] })
-  // });
-  // return salesarray;
+  data.forEach((val, idx) => {
+
+    // console.log('val : ', val);
+    // console.log('idx : ', idx , 'hour : ',hours[idx] );
+    salesarray.push({ sales: `${val} cookies`, time: hours[idx] })
+  });
+  // console.log('salesarray : ', salesarray);
+  return salesarray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,14 +74,17 @@ Write a function named howManyTreats that will return the quantity of treats you
 ------------------------------------------------------------------------------------------------ */
 
 const errands = [
-  { store: 'Grocery store',
-    items: [ { name: 'Eggs', quantity: 12 }, { name: 'Milk', quantity: 1 }, { name: 'Apples', quantity: 3 }]
+  {
+    store: 'Grocery store',
+    items: [{ name: 'Eggs', quantity: 12 }, { name: 'Milk', quantity: 1 }, { name: 'Apples', quantity: 3 }]
   },
-  { store: 'Drug store',
-    items: [ { name: 'Toothpaste', quantity: 1 }, { name: 'Toothbrush', quantity: 3 }, { name: 'Mouthwash',quantity: 1 } ]
+  {
+    store: 'Drug store',
+    items: [{ name: 'Toothpaste', quantity: 1 }, { name: 'Toothbrush', quantity: 3 }, { name: 'Mouthwash', quantity: 1 }]
   },
-  { store: 'Pet store',
-    items: [ { name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 } ]
+  {
+    store: 'Pet store',
+    items: [{ name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 }]
   }
 ];
 
@@ -265,14 +271,14 @@ describe('Testing challenge 4', () => {
 
 describe('Testing challenge 5', () => {
   test('It should multiply all the numbers together', () => {
-    expect(calculateProduct([[1,2], [3,4], [5,6]])).toStrictEqual(720);
+    expect(calculateProduct([[1, 2], [3, 4], [5, 6]])).toStrictEqual(720);
   });
 
   test('It should return zero if there are any zeroes in the data', () => {
     expect(calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]])).toStrictEqual(0);
   });
   test('It should work even if some of the arrays contain no numbers', () => {
-    expect(calculateProduct([[1,2], [], [3,4,5]])).toStrictEqual(120);
+    expect(calculateProduct([[1, 2], [], [3, 4, 5]])).toStrictEqual(120);
   });
 });
 
