@@ -183,7 +183,7 @@ const isSecure = (url) => {
   // let strrr = url.substr(0,7);
   // console.log('strrr : ', strrr);
 
-  let regx = /https:\/\//;
+  let regx = /https:\/\//;                                           // I hate reg.exp so, I goole it (https://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url)
   let r = regx.test(url);
   console.log('regx : ', regx);
   console.log('r : ', r);
@@ -212,6 +212,34 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+
+  const helper = ((row1, col1, row2, col2, row3, col3) =>
+  {
+
+    return board[row1][col1] !== '' && 
+      board[row1][col1] === board[row2][col2] &&
+      board[row2][col2] === board[row3][col3];
+    });
+
+    //First row ( 0,0,0) , 1st ,2nd and 3rd columns (0,1,2)
+    if (helper(0,0,0,1,0,2)) return true;
+    //Second row (1,1,1) , 1st ,2nd and 3rd columns (0,1,2)
+    else if (helper(1,0,1,1,1,2)) return true;
+    //Third row (2,2,2) , 1st ,2nd and 3rd columns (0,1,2)
+    else if (helper(2,0,2,1,2,2)) return true;
+    //First Col ( 0,0,0) , 1st ,2nd and 3rd rows (0,1,2)
+    else if (helper(0,0,1,0,2,0)) return true;
+    //Second Col (1,1,1) , 1st ,2nd and 3rd rows (0,1,2)
+    else if (helper(0,1,1,1,2,1)) return true;
+    //Third Col (2,2,2) , 1st ,2nd and 3rd rows (0,1,2)
+    else if (helper(0,2,1,2,2,2)) return true;
+    //First Diogonal
+    else if (helper(0,0,1,1,2,2)) return true;
+    //Second Diogonal
+    else if (helper(0,2,1,1,2,0)) return true;
+    else
+    return false;
+    
 };
 
 /* ------------------------------------------------------------------------------------------------
