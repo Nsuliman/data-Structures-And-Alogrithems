@@ -12,13 +12,13 @@ const toTitleCase = (arr) => {
   // Solution code here...
   let array = [];
 
-  console.log('arr : ', arr);
+  // console.log('arr : ', arr);
   arr.forEach(element => {
     let third = element.charAt(0).toUpperCase() + element.substr(1);
     array.push(third);
   });
 
-  console.log('array : ', array);
+  // console.log('array : ', array);
   return array;
 };
 
@@ -95,6 +95,28 @@ let starWarsData = [{
 
 let biggerThanLuke = (arr) => {
   // Solution code here...
+
+  let arr2 = [];
+
+  // console.log('arr : ', arr);
+  arr.forEach( element => 
+    {
+      // console.log('element : ', element);
+      if (element.mass > 77 )
+      arr2.push(element.name)
+    });
+    // console.log('arr2 : ', arr2);
+  let strr = '';
+    arr2.forEach(a => 
+      {
+        a += ' - ';
+        // console.log('a : ', a);
+        strr +=a;
+      });
+      // console.log('strr : ', strr);
+      let ss = strr.slice(0,strr.length-3);
+      // console.log('ss : ', ss);
+      return ss;
 };
 
 /* ------------------------------------------------------------------------------------------------
