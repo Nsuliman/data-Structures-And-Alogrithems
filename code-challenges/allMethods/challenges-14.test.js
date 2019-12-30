@@ -12,14 +12,13 @@ const toTitleCase = (arr) => {
   // Solution code here...
   let array = [];
 
+  console.log('arr : ', arr);
   arr.forEach(element => {
-    // let first = element.charAt(0);
-    // let second = first.toUppercase();
-    // let third = second + element.substrig(1);
-
-    let third = element.charAt(0).toUpperCase() + element.substrig(1);
+    let third = element.charAt(0).toUpperCase() + element.substr(1);
     array.push(third);
   });
+
+  console.log('array : ', array);
   return array;
 };
 
