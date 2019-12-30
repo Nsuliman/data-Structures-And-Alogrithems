@@ -82,6 +82,11 @@ Write a function named allHappy that takes in an array of strings and returns a 
 const allHappy = (arr) => {
   // Solution code here...
 
+  //The every() method checks if all elements in an array pass a test (provided as a function).
+    let arr2 = arr.every(string => string.includes(':)'));
+    console.log('arr2 : ', arr2);
+    return arr2;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
