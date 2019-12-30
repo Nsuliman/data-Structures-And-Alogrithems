@@ -84,7 +84,7 @@ const allHappy = (arr) => {
 
   //The every() method checks if all elements in an array pass a test (provided as a function).
     let arr2 = arr.every(string => string.includes(':)'));
-    console.log('arr2 : ', arr2);
+    // console.log('arr2 : ', arr2);
     return arr2;
 
 };
@@ -126,6 +126,12 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 
 const unenrollBrook = (arr) => {
   // Solution code here...
+
+  return arr.map (element=> 
+    { 
+      console.log('element : ', element);
+       return element.filter (r => !r.includes('Brook'))
+    });
 };
 
 /* ------------------------------------------------------------------------------------------------
