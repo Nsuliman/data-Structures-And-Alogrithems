@@ -59,6 +59,18 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+
+  // console.log('str : ', str);
+  let arr = str.split('');
+  // console.log('arr : ', arr);
+ 
+  let r= arr.filter( (element,idx) =>
+  {
+    if (idx%2 !==0)
+    return element; 
+  });
+    // console.log('r : ', r);
+   return r.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
