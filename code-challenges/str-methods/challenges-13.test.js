@@ -159,6 +159,15 @@ const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sat
 
 const sortByDay = (arr) => {
   // Solution code here...
+
+  console.log('arr : ', arr);  
+  let arr2 = daysOfWeek.map (element=> 
+    { 
+      console.log('element : ', element);
+       return arr.filter (r => r.includes(element))
+    });
+    console.log('arr2 : ', arr2);
+    return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
