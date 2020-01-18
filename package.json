@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage --verbose",
     "watch": "jest --watchall"
-  },
+  }
+  ,
   "keywords": [],
   "author": "",
   "license": "MIT",
